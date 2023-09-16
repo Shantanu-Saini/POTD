@@ -15,7 +15,6 @@
 *.so
 *.dylib
 *.dll
-*.cph
 
 # Fortran module files
 *.mod
@@ -31,3 +30,5 @@
 *.exe
 *.out
 *.app
+
+*/cph/
