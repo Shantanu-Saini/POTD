@@ -14,20 +14,17 @@ public:
     vector<long long> printFibb(int n)
     {
         // code here
-        vector<long long> ans;
-        long long a = 1;
-        long long b = 1;
         if (n == 1)
         {
-            ans.push_back(a);
-            return ans;
+            return {1};
         }
         if (n == 2)
         {
-            ans.push_back(a);
-            ans.push_back(b);
-            return ans;
+            return { 1, 1 };
         }
+        vector<long long> ans;
+        long long a = 1;
+        long long b = 1;
         ans.push_back(a);
         ans.push_back(b);
         for (long long i = 3; i <= n; i++)
