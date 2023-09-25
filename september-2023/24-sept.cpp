@@ -9,26 +9,59 @@ public:
     vector<int> duplicates(int arr[], int n)
     {
         // code here
-        map<int, int> ans;
-        vector<int> res;
+        // map<int, int> ans;
+        // vector<int> res;
+        // for (int i = 0; i < n; i++)
+        // {
+        //     ans[arr[i]]++;
+        // }
+
+        // for (auto v : ans)
+        // {
+        //     if (v.second > 1)
+        //     {
+        //         res.push_back(v.first);
+        //     }
+        // }
+
+        // if (res.empty())
+        // {
+        //     res.push_back(-1);
+        // }
+        // return res;
+        int max = INT_MIN;
         for (int i = 0; i < n; i++)
         {
-            ans[arr[i]]++;
-        }
-
-        for (auto v : ans)
-        {
-            if (v.second > 1)
+            if (arr[i] > max)
             {
-                res.push_back(v.first);
+                max = arr[i];
             }
         }
 
-        if (res.empty())
+        // Initialize hash array with zeros
+        int hash[max + 1] = {0}; // We add 1 to accommodate values from 0 to max
+
+        for (int i = 0; i < n; i++)
         {
-            res.push_back(-1);
+            hash[arr[i]]++;
         }
-        return res;
+
+        vector<int> ans;
+
+        for (int i = 0; i <= max; i++)
+        { // Iterate from 0 to max
+            if (hash[i] > 1)
+            {
+                ans.push_back(i);
+            }
+        }
+
+        if (ans.empty())
+        {
+            ans.push_back(-1);
+        }
+
+        return ans;
     }
 };
 
