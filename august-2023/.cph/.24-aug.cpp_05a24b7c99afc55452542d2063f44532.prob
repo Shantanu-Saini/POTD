@@ -1,1 +1,0 @@
-{"name":"Local: 24-aug","url":"d:\\DATA\\potd\\august-2023\\24-aug.cpp","tests":[{"id":1692820536016,"input":"1\n0033\n2","output":"66"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DATA\\potd\\august-2023\\24-aug.cpp","group":"local","local":true}
